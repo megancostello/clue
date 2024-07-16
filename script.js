@@ -86,6 +86,7 @@ function initBoard() {
       if (JSON.stringify(currentGuess) === JSON.stringify(answer)) {
         console.log('you win');
         guessesRemaining = 0;
+        alert('WINNER');
       }
       else {
         console.log('you lose');
@@ -98,7 +99,7 @@ function initBoard() {
             }
             else {
               seenCards.push(remainingCards[i]);
-              seen.appendChild(document.createTextNode(" ".concat(remainingCards[i].toString())));
+              seen.appendChild(document.createTextNode(", ".concat(remainingCards[i].toString())));
               board.appendChild(seen);
               console.log('adding ', remainingCards[i], ' to seen deck');
             }
